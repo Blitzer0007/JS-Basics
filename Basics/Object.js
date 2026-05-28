@@ -32,3 +32,10 @@ console.log(multiBrowser[0]);   //It returns first one
 console.log(multiBrowser[1]);   //It returns second one
 console.log(multiBrowser[0].version);   //To get particular value
 console.table(multiBrowser);
+
+multiBrowser.forEach((element) => {  //Iteration using forEach loop
+
+    if(element.name === "chrome"){   //If condition to find the particular object in the array of objects
+    console.log(element);
+}
+})

@@ -7,6 +7,16 @@ let uploadVideo = (uploadVideoCallBack) => {                            //Passin
     }, 3000)
 }
 
+
+let aiEnhacingVideo = (enhanceCallBack) => {
+    console.log("Enhancing video");
+    setTimeout(() => {
+        console.log("Enhanced");
+        enhanceCallBack();
+    },3000);
+}
+
+
 let publishingVideo = (publishVideoCallBack) => {
     console.log("Publishing video");
     setTimeout(() => {
@@ -20,6 +30,7 @@ let notifySubs = () => {
 }
 
 // uploadVideo()
+// aiEnhacingVideo()
 // publishingVideo()                       //Here it is async so it wont wait for the timeouts like random first executions
 // notifySubs()
 
@@ -27,11 +38,12 @@ let notifySubs = () => {
 
 uploadVideo(() =>{                        //For uploadVideo, "publishingVideo" is the callBack and reference is the params
                                           // by calling uploadVideoCallBack();
-
+aiEnhacingVideo(()=>{
     publishingVideo(() => {               //For publishingVideo, "notifySubs" is the callBack and reference is the params
                                           // by calling publishVideoCallBack();
 
         notifySubs()                      //Returns the value
 
     })
+})
 })

@@ -9,14 +9,14 @@ if (fruit === "Kiwi") {
 }
 
 //Callback - A "callback" is any function that is passed in as a parameter
-let foundFruit = fruitsPredNCallBack.find(predicate)    //Here find is a callback function which accepts another methods as params
+let foundFruit = fruitsPredNCallBack.find(predicate)    //Here find[has internal for or for each loop] is a callback function which accepts another methods as params
                                                         //Find retrive the value cuz predicate doing the boolean work
 console.log(foundFruit);                                //Prints kiwi
 
 let foundFruitSL = fruitsPredNCallBack.find(fruit => fruit === "Orange")     //Params n condition for predicate in single line implemenation
 console.log(foundFruitSL);
 
-console.log(fruitsPredNCallBack.includes("Kiwi"));      //Returns boolean
+console.log(fruitsPredNCallBack.includes("Kiwi"));              //Returns boolean
 console.log(fruitsPredNCallBack.indexOf("Dragon fruit"));       //Gives the index of the value
 
 console.log(fruitsPredNCallBack.sort());        //Alpha sorting

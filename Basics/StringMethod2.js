@@ -22,4 +22,4 @@ let str1 = "hello welcome to Hell"
 console.log(str1.startsWith("hello"));      //Gives boolean value
 console.log(str1.endsWith("Hell"));         //Gives boolean value
 
-console.log(str1.search("w"));   
+console.log(str1.search("w"));      //Gives the index of the first occurrence of the character or string
